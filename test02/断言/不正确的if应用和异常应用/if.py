@@ -4,8 +4,9 @@
 # 创建时间 ：2019/5/6 0006   9:04
 # 文件     ：if.py
 # IDE      : PyCharm
+"""不正确的if使用，不管复选框是不是自动选中，判断的结果都是pass，严禁使用if else进行断言判定"""
 import unittest
-from selenium import webdriver
+#from selenium import webdriver
 from init import InitTest1
 # class BaiduTest(unittest.TestCase):
 #

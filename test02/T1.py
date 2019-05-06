@@ -10,7 +10,7 @@ import unittest
 from init import InitTest
 
 
-class BaiduTest(InitTest):
+class BaiduTest(InitTest):#直接调用init模块中的InitTest初始化浏览器方法
     def test_baidu_news(self):
         #验证：测试百度首页点击新闻的跳转
         self.driver.find_element_by_link_text("新闻").click()
@@ -22,6 +22,6 @@ class BaiduTest(InitTest):
         self.assertEquals(self.driver.current_url,'http://map.baidu.com/')
 
 if __name__ == '__main__':
-    unittest.main(verbosity=2)
+    unittest.main(verbosity=2)#verbosity  1级别执行测试，2级别显示详细执行步骤及结果
 
 

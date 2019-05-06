@@ -10,7 +10,7 @@ import unittest
 from selenium import webdriver
 
 
-class InitTest(unittest.TestCase):
+class InitTest(unittest.TestCase):#把所有的浏览器初始化封装为一个类进行调用
     def setUp(self):#打开浏览器
         self.driver = webdriver.Chrome()
         self.driver.get('http://www.baidu.com/')
