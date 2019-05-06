@@ -6,8 +6,10 @@
 # IDE      : PyCharm
 import unittest
 import os
+import HTMLTestRunner
+import time
 
-def allCases():
+def allTests():
     """获取所有测试模块"""
     suite = unittest.TestLoader().discover(
         #批量获取测试用例模块
@@ -20,9 +22,21 @@ def allCases():
     """discover方法代码：def discover(self,start_dir,pattern='test_*.py,top_level_dir=None):
     """
     return suite
+def getNowTime():
+    """获取当前的时间"""
+    return time.strftime('%Y-%M-%d %H_%M_%S',time.localtime(time.time()))
 
+ #run方法用来执行执行测试套件中的测试用例和生成测试报告
+def run():
+    fileName = os.path.join(os.path.dirname(__file__),'report',getNowTime()+'report.html')
+    fp = open(fileName,'wb')
+    runner = HTMLTestRunner.HTMLTestRunner(
+        stream=fp,
+        title='UI 自动化测试报告',
+        description='UI 自动化测试报告详细信息')
+    runner.run(allTests())
 
 if __name__ == '__main__':
-    unittest.TextTestRunner(verbosity=2).run(allCases())#执行所有测试模块
+    run()
 
 
