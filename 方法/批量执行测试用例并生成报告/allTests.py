@@ -10,7 +10,7 @@ import HTMLTestRunner
 import time
 
 def allTests():
-    """获取所有测试模块"""
+    """获取所有测试模块."""
     suite = unittest.TestLoader().discover(
         #批量获取测试用例模块
         start_dir= os.path.dirname(__file__),
