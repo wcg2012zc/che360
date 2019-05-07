@@ -29,9 +29,8 @@ class che360test(Che360Test):
         self.driver.find_element_by_link_text('报价库').click()
         self.driver.get('http://www.360che.com/')
 
-    def test_360che_zixun(self):#点击资讯后跳转
-        self.driver.find_element_by_link_text('资讯').click()
-        self.driver.get('http://www.360che.com/')
+
+
 
 if __name__ == '__main__':
     suite = unittest.TestLoader().loadTestsFromModule('unittest1.py')

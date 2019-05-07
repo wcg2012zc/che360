@@ -1,9 +1,10 @@
 #!usr/bin/env python
 #-*- coding:utf-8 _*-
 # 作者     ：zhangchen
-# 创建时间 ：2019/5/6 0006   15:10
-# 文件     ：allTests.py
+# 创建时间 ：2019/5/7 0007   9:06
+# 文件     ：alltest.py
 # IDE      : PyCharm
+
 import unittest
 import os
 import HTMLTestRunner
@@ -15,7 +16,7 @@ def allTests():
         #批量获取测试用例模块
         start_dir= os.path.dirname(__file__),
         #start_dir是测试模块的路径，存放在testCase包中
-        pattern='test_*.py',
+        pattern='Test*.py',
         #pattern用来获取testCase包中所有test开头的模块文件
         top_level_dir=None)
         #top_level_dir调用的时候直接给默认值None
@@ -39,5 +40,3 @@ def run():
 
 if __name__ == '__main__':
     run()
-
-
