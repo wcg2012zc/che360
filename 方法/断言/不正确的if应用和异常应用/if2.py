@@ -4,7 +4,7 @@
 # 创建时间 ：2019/5/6 0006   11:18
 # 文件     ：if2.py
 # IDE      : PyCharm
-"""此代码与if结果一样，即使自动登录不被勾选，测试结果让是pass"""
+"""此代码与if结果一样，即使自动登录不被勾选，测试结果仍是pass"""
 import unittest
 
 from init import InitTest1

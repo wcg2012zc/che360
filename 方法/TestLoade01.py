@@ -28,5 +28,6 @@ class BaiduTest(unittest.TestCase):
 def suite(testCaseClass):
     suite = unittest.TestLoader.loadTestsFromTestCase(testCaseClass)
     return suite
+
 if __name__ == '__main__':
     suite = unittest.TextTestRunner(verbosity=2).run(BaiduTest.suite(BaiduTest))

@@ -4,12 +4,8 @@
 # 创建时间 ：2019/4/30 0030   11:25
 # 文件     ：Tsetsuite.py
 # IDE      : PyCharm
-#from selenium import webdriver
-
 import unittest
-
 from Driver import Che360Test
-
 class che360test(Che360Test):
 
     def test_title(self):
@@ -41,7 +37,6 @@ class che360test(Che360Test):
 
     def tearDown(self):
         self.driver.quit()
-
 
 if __name__ == '__main__':
     suite = unittest.TestLoader().loadTestsFromModule('unittest1.py')

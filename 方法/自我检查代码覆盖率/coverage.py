@@ -11,7 +11,7 @@ Python3下，使用pip3 install coverage，安装coverage
 完成安装后，cd到test*开头的模块目录下
 运行coverage3 run allTest.py   这个是运行所有test开头的模块
 再次执行coverage html 执行代码覆盖率 通过html文件查看
-执行后，在Chapter4目录下回生成htmlcov文件夹（代码覆盖率统计），找到里面的index.html打开
+执行后，在Chapter4目录下会生成htmlcov文件夹（代码覆盖率统计），找到里面的index.html打开
 这里会详细展示代码运行情况
 
 ————————————————————————华丽的分割线——————————————————————————————
