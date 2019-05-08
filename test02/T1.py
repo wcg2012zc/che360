@@ -7,7 +7,7 @@
 
 
 import unittest
-from init import InitTest
+from test02.init import InitTest
 
 
 class BaiduTest(InitTest):#直接调用init模块中的InitTest初始化浏览器方法

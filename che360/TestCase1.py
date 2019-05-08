@@ -5,38 +5,19 @@
 # 文件     ：Tsetsuite.py
 # IDE      : PyCharm
 import unittest
-from Driver import Che360Test
-class che360test(Che360Test):
 
-    def test_title(self):
+
+from 方法.Driver1 import Che360Test
+from basepage import Basic
+
+
+class che360test(Che360Test,Basic):
+    def test_title01(Basic):
         #验证：浏览器的title
-        self.assertEquals(self.driver.title,'卡车之家-看车·买车·养车·聊车的商用车服务平台')
+        Basic.ActionChains_class('more')
+        Basic.clickelement_xpath('//*[@id="sitenav"]/dl[2]/dt/a')
+        print('执行了吗')
 
-    def tearDown(self):
-        self.driver.quit()
-
-    def test_so(self):
-        #验证：输入框可编辑性:
-        so = self.driver.find_element_by_id('keyword')
-        self.assertTrue(so.is_enabled())
-
-    def tearDown(self):
-        self.driver.quit()
-
-    def test_001(self):#验证：点击资讯按钮
-        self.driver.find_element_by_link_text('资讯').click()
-        url = self.driver.current_url
-        self.assertEquals(url, 'http://www.360che.com/')
-
-    def tearDown(self):
-        self.driver.quit()
-
-    def test_002(self):#验证：点击报价库按钮
-        self.driver.find_element_by_link_text('报价库').click()
-        self.driver.get('http://www.360che.com/')
-
-    def tearDown(self):
-        self.driver.quit()
 
 if __name__ == '__main__':
     suite = unittest.TestLoader().loadTestsFromModule('unittest1.py')
