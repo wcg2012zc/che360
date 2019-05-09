@@ -4,11 +4,14 @@
 # 创建时间 ：2019/5/8 0008   17:42
 # 文件     ：basepage.py
 # IDE      : PyCharm
-
 import unittest
+from selenium import webdriver
+from Util.singleton import singleton
 from selenium.webdriver.support.select import Select
+from selenium.webdriver import ActionChains
+from selenium.common import exceptions
 import selenium.webdriver.support.ui as ui
-from TestData.Driver import DriverHandle
+from Util.Driver import DriverHandle
 from selenium.webdriver.common.action_chains import *
 from selenium.webdriver.support.wait import WebDriverWait
 
